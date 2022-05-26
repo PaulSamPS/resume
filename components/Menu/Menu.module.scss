@@ -1,0 +1,39 @@
+@import "styles/colors";
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	padding: 45px 20px;
+
+	h1 {
+		margin: 0;
+		color: $white;
+		font-weight: 800;
+		font-size: 25px;
+	}
+
+	ul {
+		display: flex;
+		padding: 0;
+		column-gap: 40px;
+
+		li {
+			color: $white;
+			font-weight: 300;
+			font-size: 17px;
+			list-style: none;
+			cursor: pointer;
+			transition: all ease 0.2s;
+
+			&:hover {
+				color: $purple;
+			}
+		}
+	}
+
+	.active {
+		color: $purple;
+	}
+}

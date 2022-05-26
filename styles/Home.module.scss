@@ -1,0 +1,16 @@
+%container {
+	max-width: 990px;
+	margin: 0 auto;
+}
+
+.divider {
+	border-bottom: 1px solid #535E88;
+}
+
+.menu {
+	@extend %container;
+}
+
+.title {
+	@extend %container;
+}
