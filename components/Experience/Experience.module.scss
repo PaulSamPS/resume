@@ -1,0 +1,55 @@
+@import './styles/container';
+@import './styles/colors';
+
+.wrapper {
+  .title  {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 45px 20px;
+     border-bottom: 1px solid #E5EBF2;
+  }
+
+  .experience {
+    @extend %container;
+      width: 800px;
+      margin: 0 auto;
+    padding-top: 120px;
+    .item {
+      display: flex;
+
+      .date {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        min-width: 50%;
+        padding-right: 90px;
+        border-right: 1px solid #E5EBF2;
+      }
+
+      .divider {
+        width: 1px;
+        height: 100%;
+        background: #E5EBF2;
+        position: relative;
+        margin-top: 2px;
+        div {
+          width: 9px;
+          height: 9px;
+          background: $purple;
+          border-radius: 50%;
+          position: absolute;
+          top: 2px;
+          left: -6px;
+        }
+      }
+
+      .company {
+        display: flex;
+        padding-left: 90px;
+        margin-bottom: 70px;
+        flex-direction: column;
+      }
+    }
+  }
+}

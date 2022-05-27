@@ -1,0 +1,12 @@
+@import './styles/container';
+@import './styles/colors';
+
+
+.container {
+  width: 100%;
+  background: $grey-light;
+  .wrapper {
+    padding: 150px 20px;
+    @extend %container610;
+  }
+}

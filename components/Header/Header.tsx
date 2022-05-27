@@ -7,7 +7,7 @@ import Image from 'next/image';
 export const Header = ({ className, ...props }: HeaderType) => {
   return (
     <div className={classNames(className, styles.wrapper)} {...props}>
-      <h1>Frontend</h1>
+      <h1>Frontend - разработчик</h1>
       <p>
         Mission-driven full stack developer with a passion for thoughtful UI design, collaboration,
         and teaching.
@@ -20,6 +20,12 @@ export const Header = ({ className, ...props }: HeaderType) => {
           src={ProfilePicture}
           alt='ProfilePicture'
         />
+      </div>
+      <div className={styles.contacts}>
+        <div>
+          <span>Телефон:</span>
+          <span>+79225576656</span>
+        </div>
       </div>
     </div>
   );

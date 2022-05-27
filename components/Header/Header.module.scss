@@ -8,13 +8,27 @@
     margin: 0;
   }
 
+  h1 {
+    margin-top: 115px;
+    margin-bottom: 25px;
+  }
+
+  p {
+    margin-bottom: 50px;
+  }
+
   .imageContainer {
     width: 250px;
 
     .image {
+      box-shadow: 0 0 8px 0 rgba(34, 60, 80, 0.2);
       border-radius: 50%;
       object-fit: cover;
     }
+  }
+
+  .contacts {
+    margin-bottom: 150px;
   }
 
 }
