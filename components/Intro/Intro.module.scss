@@ -8,5 +8,8 @@
   .wrapper {
     padding: 150px 20px;
     @extend %container610;
+    h1 {
+      margin-bottom: 30px;
+    }
   }
 }

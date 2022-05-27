@@ -1,17 +1,21 @@
 import { HeaderType } from './Header.type';
 import ProfilePicture from '../../images/profile.jpg';
+import WhatsappIcon from './whatsapp.svg';
+import EmailIcon from './email.svg';
 import styles from './Header.module.scss';
 import classNames from 'classnames';
 import Image from 'next/image';
-
+import { H } from '../H/H';
+import { P } from '../P/P';
+import { Span } from '../Span/Span';
 export const Header = ({ className, ...props }: HeaderType) => {
   return (
     <div className={classNames(className, styles.wrapper)} {...props}>
-      <h1>Frontend - разработчик</h1>
-      <p>
+      <H>Frontend - разработчик</H>
+      <P>
         Mission-driven full stack developer with a passion for thoughtful UI design, collaboration,
         and teaching.
-      </p>
+      </P>
       <div className={styles.imageContainer}>
         <Image
           height={250}
@@ -22,9 +26,20 @@ export const Header = ({ className, ...props }: HeaderType) => {
         />
       </div>
       <div className={styles.contacts}>
-        <div>
-          <span>Телефон:</span>
-          <span>+79225576656</span>
+        <div className={styles.item}>
+          <div className={styles.icon}>
+            <WhatsappIcon />
+            <Span>Whatapp</Span>
+          </div>
+          <P>+79225576656</P>
+        </div>
+        <div className={styles.line} />
+        <div className={styles.item}>
+          <div className={styles.icon}>
+            <EmailIcon />
+            <Span>Email</Span>
+          </div>
+          <P>psamoylenko2@gmail.com</P>
         </div>
       </div>
     </div>

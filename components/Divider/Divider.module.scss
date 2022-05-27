@@ -1,0 +1,23 @@
+@import './styles/colors';
+
+.divider {
+  position: relative;
+  div {
+    width: 9px;
+    height: 9px;
+    background: $purple;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: -4px;
+  }
+}
+
+.vertical {
+  border-right: 1px solid #E5EBF2;
+  margin: 2px 0;
+}
+
+.dividerLast {
+ border-right: none;
+}

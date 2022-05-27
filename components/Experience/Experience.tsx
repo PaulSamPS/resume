@@ -2,14 +2,11 @@ import React from 'react';
 import styles from './Experience.module.scss';
 import { ExperienceType } from './Experience.type';
 import classNames from 'classnames';
-
-interface IExp {
-  id: number;
-  years: string;
-  position: string;
-  company: string;
-  des: string;
-}
+import { IExp } from './experince.interface';
+import { Divider } from '../Divider/DIvider';
+import { H } from '../H/H';
+import { P } from '../P/P';
+import { Span } from '../Span/Span';
 
 const exp = [
   {
@@ -19,27 +16,40 @@ const exp = [
     company: 'Wix',
     des: 'Duis aute irure dolor in reprehenderit in vol patate velit esse cillum dolore eu fugiat nulla pari. Excepteur sint occana inna tecat cupidatat non proident.',
   },
+  {
+    id: 1,
+    years: '2021 - 2021',
+    position: 'FULL STACK DEVELOPER',
+    company: 'Google',
+    des: 'Duis aute irure dolor in reprehenderit in vol patate velit esse cillum dolore eu fugiat nulla pari. Excepteur sint occana inna tecat cupidatat non proident.',
+  },
+  {
+    id: 2,
+    years: '2021 - 2021',
+    position: 'FULL STACK DEVELOPER',
+    company: 'Facebook',
+    des: 'Duis aute irure dolor in reprehenderit in vol patate velit esse cillum dolore eu fugiat nulla pari. Excepteur sint occana inna tecat cupidatat non proident.',
+  },
 ];
 
 export const Experience = ({ className, ...props }: ExperienceType) => {
+  console.log(exp.length - 1);
   return (
     <div className={classNames(className, styles.wrapper)} {...props}>
       <div className={styles.title}>
-        <h1>Experience</h1>
+        <H>Experience</H>
       </div>
       <div className={styles.experience}>
         {exp.map((e: IExp) => (
           <div key={e.id} className={styles.item}>
             <div className={styles.date}>
-              <span>{e.years}</span>
-              <span>{e.position}</span>
+              <Span>{e.years}</Span>
+              <P>{e.position}</P>
             </div>
-            <div className={styles.divider}>
-              <div />
-            </div>
+            <Divider appearance='vertical' arr={exp} itemId={e.id} />
             <div className={styles.company}>
-              <span>{e.company}</span>
-              <span>{e.des}</span>
+              <Span>{e.company}</Span>
+              <P>{e.des}</P>
             </div>
           </div>
         ))}
