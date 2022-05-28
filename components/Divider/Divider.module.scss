@@ -18,6 +18,15 @@
   margin: 2px 0;
 }
 
+.horizontal {
+  border-bottom: 1px solid #E5EBF2;
+
+  div {
+    top: -4px;
+    left: 0;
+  }
+}
+
 .dividerLast {
  border-right: none;
 }

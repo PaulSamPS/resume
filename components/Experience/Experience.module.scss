@@ -4,20 +4,11 @@
 .wrapper {
   border-bottom: 1px solid #E5EBF2;
 
-  .title  {
-    text-align: center;
-    text-transform: uppercase;
-    margin: 0;
-    padding: 45px 20px;
-     border-bottom: 1px solid #E5EBF2;
-  }
-
   .experience {
     @extend %container;
       width: 800px;
       margin: 0 auto;
-    padding-top: 120px;
-    padding-bottom: 90px;
+    padding: 120px 20px 90px;
     .item {
       display: flex;
 

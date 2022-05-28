@@ -1,8 +1,18 @@
 @import './styles/colors';
 
-.h1 {
+.wrapper  {
+	text-align: center;
 	margin: 0;
 
 	font-size: 26px;
 	color: $purple;
+}
+
+.uppercase {
+	text-transform: uppercase;
+	padding: 45px 20px;
+}
+
+.border {
+	border-bottom: 1px solid #E5EBF2;
 }

@@ -8,6 +8,7 @@ export const Divider = ({ arr, itemId, appearance, className, ...props }: Divide
     <div
       className={classNames(className, styles.divider, {
         [styles.vertical]: appearance === 'vertical',
+        [styles.horizontal]: appearance === 'horizontal',
         [styles.dividerLast]: arr.length - 1 === itemId,
       })}
       {...props}

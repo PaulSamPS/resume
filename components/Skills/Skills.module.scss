@@ -1,0 +1,23 @@
+@import './styles/container';
+@import './styles/colors';
+
+.wrapper {
+
+  .skills {
+    @extend %container;
+    width: 800px;
+    margin: 0 auto;
+    padding: 120px 20px 90px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+
+    .item {
+      margin-bottom: 30px;
+      p {
+        border-bottom: 5px solid #E5EBF2;
+        padding-bottom: 10px;
+      }
+    }
+  }
+}

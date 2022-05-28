@@ -1,14 +1,12 @@
 import React from 'react';
-import styles from './Experience.module.scss';
-import { ExperienceType } from './Experience.type';
-import classNames from 'classnames';
-import { IExp } from './experince.interface';
-import { Divider } from '../Divider/DIvider';
+import styles from './Education.module.scss';
 import { H } from '../H/H';
-import { P } from '../P/P';
+import { IEducations } from './educations.interface';
 import { Span } from '../Span/Span';
+import { P } from '../P/P';
+import { Divider } from '../Divider/DIvider';
 
-const exp = [
+const educations = [
   {
     id: 0,
     years: '2021 - 2021',
@@ -32,24 +30,20 @@ const exp = [
   },
 ];
 
-export const Experience = ({ className, ...props }: ExperienceType) => {
+export const Education = () => {
   return (
-    <div className={classNames(className, styles.wrapper)} {...props}>
+    <div className={styles.wrapper}>
       <H appearance='uppercase' border='bottom'>
-        Опыт
+        Образование
       </H>
-      <div className={styles.experience}>
-        {exp.map((e: IExp) => (
+      <div className={styles.educations}>
+        {educations.map((e: IEducations) => (
           <div key={e.id} className={styles.item}>
-            <div className={styles.date}>
-              <Span>{e.years}</Span>
-              <P>{e.position}</P>
-            </div>
-            <Divider appearance='vertical' arr={exp} itemId={e.id} />
-            <div className={styles.company}>
-              <Span>{e.company}</Span>
-              <P>{e.des}</P>
-            </div>
+            <Span>{e.years}</Span>
+            <P>{e.position}</P>
+            <Divider appearance='horizontal' arr={educations} itemId={e.id} />
+            <Span>{e.company}</Span>
+            <P>{e.des}</P>
           </div>
         ))}
       </div>
