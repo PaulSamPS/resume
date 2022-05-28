@@ -1,33 +1,35 @@
-@import './styles/container';
-@import './styles/colors';
+@import "./styles/container";
+@import "./styles/colors";
 
 .wrapper {
-  border-bottom: 1px solid #E5EBF2;
+	border-bottom: 1px solid $color3;
 
-  .experience {
-    @extend %container;
-      width: 800px;
-      margin: 0 auto;
-    padding: 120px 20px 90px;
-    .item {
-      display: flex;
+	.experience {
+		@extend %container;
 
-      .date {
-        display: flex;
-        flex-direction: column;
-        text-align: right;
-        min-width: 50%;
-        padding-right: 90px;
-        row-gap: 35px;
-      }
+		width: 800px;
+		margin: 0 auto;
+		padding: 120px 20px 90px;
 
-      .company {
-        display: flex;
-        padding-left: 90px;
-        margin-bottom: 70px;
-        flex-direction: column;
-        row-gap: 35px;
-      }
-    }
-  }
+		.item {
+			display: flex;
+
+			.date {
+				display: flex;
+				flex-direction: column;
+				min-width: 50%;
+				padding-right: 90px;
+				text-align: right;
+				row-gap: 35px;
+			}
+
+			.company {
+				display: flex;
+				flex-direction: column;
+				margin-bottom: 70px;
+				padding-left: 90px;
+				row-gap: 35px;
+			}
+		}
+	}
 }

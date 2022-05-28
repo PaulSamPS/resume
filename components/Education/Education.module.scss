@@ -1,20 +1,21 @@
-@import './styles/container';
-@import './styles/colors';
+@import "./styles/container";
+@import "./styles/colors";
 
 .wrapper {
-  width: 100%;
-  background: #F9FBFD;
+	width: 100%;
+	background: $color4;
 
-  .educations {
-    @extend %container;
-    display: flex;
-    column-gap: 30px;
-    padding: 120px 0;
-  }
+	.educations {
+		@extend %container;
 
-  .item {
-    display: flex;
-    flex-direction: column;
-    row-gap: 30px;
-  }
+		display: flex;
+		padding: 120px 0;
+		column-gap: 30px;
+	}
+
+	.item {
+		display: flex;
+		flex-direction: column;
+		row-gap: 30px;
+	}
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ForwardedRef, forwardRef } from 'react';
 import { H } from '../H/H';
 import styles from './Skills.module.scss';
 import { ISkills } from './skills.interface';
@@ -20,19 +20,22 @@ const skills = [
   { id: 10, name: 'MongoDB' },
 ];
 
-export const Skills = ({ className, ...props }: SkillsType) => {
-  return (
-    <div className={classNames(className, styles.wrapper)} {...props}>
-      <H appearance='uppercase' border='bottom'>
-        Навыки
-      </H>
-      <div className={styles.skills}>
-        {skills.map((s: ISkills) => (
-          <div key={s.id} className={styles.item}>
-            <P>{s.name}</P>
-          </div>
-        ))}
+export const Skills = forwardRef(
+  ({ className, ...props }: SkillsType, ref: ForwardedRef<HTMLDivElement>) => {
+    return (
+      <div className={classNames(className, styles.wrapper)} ref={ref} {...props}>
+        <H appearance='uppercase' border='bottom'>
+          Навыки
+        </H>
+        <div className={styles.skills}>
+          {skills.map((s: ISkills) => (
+            <div key={s.id} className={styles.item}>
+              <P>{s.name}</P>
+              <div />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+);

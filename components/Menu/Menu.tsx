@@ -11,8 +11,16 @@ const links = [
   { id: 4, link: 'Резюме' },
 ];
 
-export const Menu = ({ className, ...props }: MenuType) => {
+export const Menu = ({ scroll, className, ...props }: MenuType) => {
   const [activeLink, setActiveLink] = useState<number>(0);
+
+  const click = (link: string, id: number) => {
+    if (link === 'Навыки') {
+      scroll();
+      setActiveLink(id);
+    }
+  };
+
   return (
     <header className={classNames(className, styles.header)} {...props}>
       <H appearance='uppercase'>Павел Самойленко</H>
@@ -23,7 +31,7 @@ export const Menu = ({ className, ...props }: MenuType) => {
               [styles.active]: activeLink === index,
             })}
             key={l.id}
-            onClick={() => setActiveLink(index)}
+            onClick={() => click(l.link, l.id)}
           >
             {l.link}
           </li>

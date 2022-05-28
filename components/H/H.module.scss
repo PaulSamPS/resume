@@ -1,18 +1,17 @@
-@import './styles/colors';
+@import "./styles/colors";
 
-.wrapper  {
-	text-align: center;
+.wrapper {
 	margin: 0;
-
+	color: $color1;
 	font-size: 26px;
-	color: $purple;
+	text-align: center;
 }
 
 .uppercase {
-	text-transform: uppercase;
 	padding: 45px 20px;
+	text-transform: uppercase;
 }
 
 .border {
-	border-bottom: 1px solid #E5EBF2;
+	border-bottom: 1px solid $color3;
 }

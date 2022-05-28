@@ -1,16 +1,21 @@
-@import './styles/container';
-@import './styles/colors';
-
+@import "./styles/container";
+@import "./styles/colors";
 
 .container {
-  width: 100%;
-  background: #F9FBFD;
+	width: 100%;
+	background: $color4;
 
-  .wrapper {
-    padding: 150px 20px;
-    @extend %container610;
-    h1 {
-      margin-bottom: 30px;
-    }
-  }
+	.wrapper {
+		padding: 150px 20px;
+
+		@extend %container610;
+
+		h1 {
+			margin-bottom: 30px;
+		}
+	}
+
+	span {
+		color: $purple;
+	}
 }

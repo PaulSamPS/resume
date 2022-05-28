@@ -1,8 +1,8 @@
-@import './styles/colors';
-@import './styles/container';
+@import "./styles/colors";
+@import "./styles/container";
 
 .divider {
-	border-bottom: 1px solid #E5EBF2;
+	border-bottom: 1px solid $color3;
 }
 
 .menu {
@@ -15,7 +15,7 @@
 
 .intro {
 	text-align: center;
-	background: $grey-light;
+	background: $color4;
 }
 
 .experience {
