@@ -5,6 +5,7 @@ import Image from 'next/image';
 import ViewIcon from './view.svg';
 import { P } from '../P/P';
 import { ProjectsProps } from './Projects.props';
+import Link from 'next/link';
 
 export const Projects = forwardRef(({ projects }: ProjectsProps, ref: ForwardedRef<HTMLDivElement>) => {
   return (
@@ -16,7 +17,7 @@ export const Projects = forwardRef(({ projects }: ProjectsProps, ref: ForwardedR
         {projects.map((p) => (
           <div className={styles.item} key={p._id}>
             <Image
-              src={`http://localhost:4040/projects/${p.projectImg}`}
+              src={`http://194.87.98.26:4040/projects/${p.projectImg}`}
               alt={p.name}
               width={356}
               height={241}
@@ -25,6 +26,9 @@ export const Projects = forwardRef(({ projects }: ProjectsProps, ref: ForwardedR
             <div className={styles.overlay}>
               <ViewIcon />
               <P>{p.description}</P>
+              <Link href={p.projectLink} target={'_blank'}>
+                Демо
+              </Link>
             </div>
           </div>
         ))}

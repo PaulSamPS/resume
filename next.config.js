@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['localhost'],
+    domains: ['194.87.98.26'],
   },
   reactStrictMode: true,
   webpack(config) {
