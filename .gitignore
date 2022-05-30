@@ -7,7 +7,6 @@
 
 # testing
 /coverage
-/images
 /font
 # next.js
 /.next/
