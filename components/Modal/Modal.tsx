@@ -1,5 +1,5 @@
 import React from 'react';
-import CloseIcon from '../../images/icons/close.svg';
+import { ReactComponent as CloseIcon } from '../../images/icons/close.svg';
 import { ModalProps } from './Modal.props';
 import { AnimatePresence, motion } from 'framer-motion';
 import styles from './Modal.module.scss';
