@@ -3,13 +3,13 @@ import styles from './Menu.module.scss';
 import MenuIcon from '../../images/icons/menu.svg';
 import LabelIcon from '../../images/icons/label.svg';
 import { MenuProps } from './Menu.props';
-import { useScreenSize } from '../../helpers/useScreenSize';
+import { useScreenSize } from '../../hooks/useScreenSize';
 import { Modal } from '../Modal/Modal';
 import classNames from 'classnames';
 
 export const Menu = ({ menu, setLink }: MenuProps) => {
   const [modal, setModal] = React.useState<boolean>(false);
-  const { screenWidth } = useScreenSize();
+  const screenWidth = useScreenSize();
 
   const menuMobile = (link: string) => {
     setLink(link);

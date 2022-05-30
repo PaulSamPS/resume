@@ -14,6 +14,7 @@ import { IProjectItem } from '../interfaces/project.interface';
 import { ISkillItem } from '../interfaces/skills.interfface';
 import { useScroll } from '../hooks/useScroll';
 import { Menu } from '../components/Menu/Menu';
+import { Up } from '../components/Up/Up';
 
 const Home = ({ menu, projects, skills }: HomeProps) => {
   const [link, setLink] = React.useState<string>('');
@@ -29,6 +30,7 @@ const Home = ({ menu, projects, skills }: HomeProps) => {
       <Education ref={educationRef} />
       <Projects ref={projectsRef} projects={projects} />
       <Download ref={resumeRef} />
+      <Up />
     </div>
   );
 };

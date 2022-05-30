@@ -1,0 +1,27 @@
+@import "./styles/scss/index";
+
+.up {
+  position: fixed;
+  right: 30px;
+  bottom: 80px;
+
+  button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
+    background: $color1;
+
+    svg {
+      height: 30px;
+      width: 30px;
+    }
+  }
+}

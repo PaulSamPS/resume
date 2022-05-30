@@ -1,8 +1,7 @@
 import React from 'react';
 
-export const useScreenSize = () => {
+export const useScreenSize = (): number => {
   const [screenWidth, setScreenWidth] = React.useState<number>(0);
-  console.log(screenWidth);
 
   React.useEffect(() => {
     const resizeWindow = () => {
@@ -13,5 +12,5 @@ export const useScreenSize = () => {
     return () => window.removeEventListener('resize', resizeWindow);
   }, []);
 
-  return { screenWidth };
+  return screenWidth;
 };
