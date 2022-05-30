@@ -13,6 +13,7 @@ import axios from 'axios';
 import { IProjectItem } from '../interfaces/project.interface';
 import { ISkillItem } from '../interfaces/skills.interfface';
 import { useScroll } from '../hooks/useScroll';
+import { Menu } from '../components/Menu/Menu';
 
 const Home = ({ menu, projects, skills }: HomeProps) => {
   const [link, setLink] = React.useState<string>('');
@@ -20,17 +21,7 @@ const Home = ({ menu, projects, skills }: HomeProps) => {
 
   return (
     <div className={styles.container}>
-      <header className={styles.wrapperMenu}>
-        <div className={styles.menu}>
-          <ul>
-            {menu.map((m) => (
-              <li key={m._id} onClick={() => setLink(m.name)}>
-                {m.name}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </header>
+      <Menu menu={menu} setLink={setLink} />
       <Header ref={introRef} className={styles.title} />
       <Intro className={styles.intro} />
       <Experience ref={experienceRef} className={styles.experience} />

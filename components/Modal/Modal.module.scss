@@ -1,0 +1,41 @@
+@import "./styles/scss/index";
+
+.overlay {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 998;
+	overflow: hidden;
+	background: rgb(33 31 32 / 70%);
+	opacity: 1;
+	backdrop-filter: blur(2px);
+
+	.modal {
+		position: relative;
+		top: 0;
+		left: 0;
+		z-index: 999;
+		max-width: 300px;
+		min-height: 100vh;
+		padding: 20px;
+		background: $color4;
+		border-radius: 5px;
+		box-shadow: 0 4px 4px rgb(0 0 0 / 5%);
+
+		svg {
+			position: absolute;
+			top: 20px;
+			left: 20px;
+			width: 30px;
+			height: 30px;
+			cursor: pointer;
+			transition: all ease 0.2s;
+
+			&:hover {
+				transform: rotate(90deg);
+			}
+		}
+	}
+}

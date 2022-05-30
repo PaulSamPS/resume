@@ -1,8 +1,9 @@
-@import "/styles/colors";
-@import "/styles/flex";
+@import "./styles/scss/index";
 
 .wrapper {
 	@extend %flex;
+
+	padding: 0 20px;
 
 	h1 {
 		margin-top: 115px;
@@ -26,9 +27,21 @@
 		width: 100%;
 		margin: 30px 0 150px;
 
+		@include _tablet {
+			flex-direction: column;
+			align-items: center;
+		}
+
 		.line {
 			margin: 0 20px;
 			border-right: 1px solid $color3;
+
+			@include _tablet {
+				width: 100%;
+				margin: 20px 0;
+				border-right: none;
+				border-bottom: 1px solid $color3;
+			}
 		}
 
 		.item {
@@ -40,6 +53,15 @@
 
 			&:last-child {
 				align-items: flex-start;
+			}
+
+			@include _tablet {
+				align-items: center;
+				width: 100%;
+
+				&:last-child {
+					align-items: center;
+				}
 			}
 
 			.icon {

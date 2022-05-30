@@ -1,5 +1,4 @@
-@import "./styles/container";
-@import "./styles/colors";
+@import "./styles/scss/index";
 
 .wrapper {
 	border-bottom: 1px solid $color3;
@@ -7,9 +6,13 @@
 	.experience {
 		@extend %container;
 
-		width: 800px;
+		max-width: 800px;
 		margin: 0 auto;
 		padding: 120px 20px 90px;
+
+		@include _desktop {
+
+		}
 
 		.item {
 			display: flex;
@@ -21,6 +24,14 @@
 				padding-right: 90px;
 				text-align: right;
 				row-gap: 35px;
+
+				@include _tablet {
+					padding-right: 40px;
+				}
+
+				@include _mobileL {
+					padding-right: 20px;
+				}
 			}
 
 			.company {
@@ -29,6 +40,14 @@
 				margin-bottom: 70px;
 				padding-left: 90px;
 				row-gap: 35px;
+
+				@include _tablet {
+					padding-left: 40px;
+				}
+
+				@include _mobileL {
+					padding-left: 20px;
+				}
 			}
 		}
 	}

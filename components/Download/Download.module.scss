@@ -1,19 +1,18 @@
-@import './styles/container';
-@import './styles/colors';
+@import "./styles/scss/index";
 
 .wrapper {
-  background: $color4;
-    text-align: center;
+	text-align: center;
+	background: $color4;
 
-  .download {
-    padding: 180px 20px 240px;
-    display: inline-block;
-  }
+	.download {
+		display: inline-block;
+		padding: 180px 20px 240px;
+	}
 
-  h1 {
-    padding: 0;
-    color: $purple;
-    text-decoration: underline;
-    cursor: pointer;
-  }
+	h1 {
+		padding: 0;
+		color: $purple;
+		text-decoration: underline;
+		cursor: pointer;
+	}
 }

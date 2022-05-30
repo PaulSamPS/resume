@@ -1,5 +1,4 @@
-@import "./styles/container";
-@import "./styles/colors";
+@import "./styles/scss/index";
 
 .wrapper {
 	width: 100%;
@@ -9,8 +8,17 @@
 		@extend %container;
 
 		display: flex;
-		padding: 120px 0;
+		padding: 120px 20px;
 		column-gap: 30px;
+
+		@include _desktop {
+			width: 100%;
+		}
+
+		@include _mobileL {
+			flex-direction: column;
+			row-gap: 40px;
+		}
 	}
 
 	.item {
