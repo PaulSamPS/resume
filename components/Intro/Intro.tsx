@@ -8,8 +8,8 @@ import { P } from '../P/P';
 export const Intro = forwardRef(
   ({ className, ...props }: IntroType, ref: ForwardedRef<HTMLDivElement>) => {
     return (
-      <div className={classNames(className, styles.container)} {...props}>
-        <div className={styles.wrapper} ref={ref}>
+      <div className={classNames(className, styles.container)} ref={ref} {...props}>
+        <div className={styles.wrapper}>
           <H>
             Hi, <span>I’m Pavel</span>. Nice to meet you.
           </H>

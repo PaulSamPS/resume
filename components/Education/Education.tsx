@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ForwardedRef, forwardRef } from 'react';
 import styles from './Education.module.scss';
 import { H } from '../H/H';
 import { IEducations } from './educations.interface';
@@ -30,9 +30,9 @@ const educations = [
   },
 ];
 
-export const Education = () => {
+export const Education = forwardRef((props, ref: ForwardedRef<HTMLDivElement>) => {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} ref={ref}>
       <H appearance='uppercase' border='bottom'>
         Образование
       </H>
@@ -49,4 +49,4 @@ export const Education = () => {
       </div>
     </div>
   );
-};
+});

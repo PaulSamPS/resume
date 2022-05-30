@@ -13,7 +13,6 @@
 
     .item {
       position: relative;
-      border-radius: 11px;
       cursor: pointer;
 
       &:hover {
@@ -22,11 +21,16 @@
        }
       }
 
+      img {
+        border-radius: 11px;
+      }
+
       .overlay {
         display: none;
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        padding: 20px;
         row-gap: 5px;
         position: absolute;
         width: 100%;

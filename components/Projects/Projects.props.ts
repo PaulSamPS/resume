@@ -1,6 +1,7 @@
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
+import { IProjectItem } from '../../interfaces/project.interface';
 
-export interface MenuType
+export interface ProjectsProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-  scroll: () => void;
+  projects: IProjectItem[];
 }

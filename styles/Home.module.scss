@@ -1,12 +1,47 @@
 @import "./styles/colors";
 @import "./styles/container";
 
-.divider {
+.wrapperMenu {
 	border-bottom: 1px solid $color3;
+	.menu {
+
+		@extend %container;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		padding: 20px 20px 14px;
+
+		h1 {
+			padding: 0;
+		}
+
+		ul {
+			display: flex;
+			padding: 0;
+			column-gap: 40px;
+
+			li {
+				padding-bottom: 5px;
+				color: $color1;
+				font-weight: 300;
+				font-size: 17px;
+				list-style: none;
+				border-bottom: 2px solid transparent;
+				cursor: pointer;
+				transition: all ease 0.2s;
+
+				&:hover {
+					color: $purple;
+				}
+			}
+		}
+	}
 }
 
-.menu {
-	@extend %container;
+.divider {
+	border-bottom: 1px solid $color3;
 }
 
 .title {
