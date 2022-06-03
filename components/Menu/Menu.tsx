@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Menu.module.scss';
-import { ReactComponent as MenuIcon } from '../../images/icons/menu.svg';
-import { ReactComponent as LabelIcon } from '../../images/icons/label.svg';
+import MenuIcon from '../../images/icons/menu.svg';
+import LabelIcon from '../../images/icons/label.svg';
 import { MenuProps } from './Menu.props';
 import { useScreenSize } from '../../hooks/useScreenSize';
 import { Modal } from '../Modal/Modal';
