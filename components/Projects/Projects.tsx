@@ -17,18 +17,17 @@ export const Projects = forwardRef(({ projects }: ProjectsProps, ref: ForwardedR
         {projects.map((p) => (
           <div className={styles.item} key={p._id}>
             <Image
-              src={`http://194.87.98.26:4040/projects/${p.projectImg}`}
+              src={`http://176.113.83.209:5000/projects/${p.projectImg}`}
               alt={p.name}
               width={356}
               height={241}
               priority={true}
             />
             <div className={styles.overlay}>
-              <ViewIcon />
-              <P>{p.description}</P>
               <Link href={p.projectLink} target={'_blank'}>
-                Демо
+                <ViewIcon />
               </Link>
+              <P>{p.description}</P>
             </div>
           </div>
         ))}

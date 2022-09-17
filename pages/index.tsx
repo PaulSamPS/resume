@@ -37,9 +37,9 @@ const Home = ({ menu, projects, skills }: HomeProps) => {
 export default Home;
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
-  const getMenu = await axios.get<IMenuItem[]>('http://194.87.98.26:4040/api/menu/');
-  const getProjects = await axios.get<IProjectItem[]>('http://194.87.98.26:4040/api/projects/');
-  const getSkills = await axios.get<ISkillItem[]>('http://194.87.98.26:4040/api/skills/');
+  const getMenu = await axios.get<IMenuItem[]>('http://176.113.83.209:5000/api/menu');
+  const getProjects = await axios.get<IProjectItem[]>('http://176.113.83.209:5000/api/projects');
+  const getSkills = await axios.get<ISkillItem[]>('http://176.113.83.209:5000/api/skills');
   const menu = getMenu.data;
   const projects = getProjects.data;
   const skills = getSkills.data;

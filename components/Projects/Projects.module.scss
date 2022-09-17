@@ -21,11 +21,34 @@
 
 		.item {
 			position: relative;
+			overflow: hidden;
+			border-radius: 11px;
+			box-shadow: 0 5px 5px 0 rgb(0 0 0 / 30%);
 			cursor: pointer;
 
+			&::before {
+				position: absolute;
+				top: 100%;
+				z-index: 2;
+				display: block;
+				width: 100%;
+				height: 100%;
+				background: rgb(132 40 248 / 70%);
+				box-shadow: 0 10px 20px 0 rgb(0 0 0 / 30%);
+				opacity: 0;
+				transition: all ease 0.5s;
+				content: "";
+			}
+
 			&:hover {
+				&::before {
+					top: 0;
+					opacity: 1;
+				}
+
 				.overlay {
-					display: flex;
+					top: 0;
+					opacity: 1;
 				}
 			}
 
@@ -35,20 +58,21 @@
 
 			.overlay {
 				position: absolute;
-				top: 0;
+				top: 100%;
 				right: 0;
 				left: 0;
 				z-index: 11;
-				display: none;
+				display: flex;
 				flex-direction: column;
 				align-items: center;
 				justify-content: center;
 				width: 100%;
 				height: 100%;
 				padding: 20px;
-				background: rgb(132 40 248 / 70%);
 				border-radius: 11px;
-				transition: all ease 0.2s;
+				cursor: auto;
+				opacity: 0;
+				transition: all ease 0.5s;
 				row-gap: 5px;
 
 				p {
@@ -58,6 +82,7 @@
 				svg {
 					width: 30px;
 					height: 30px;
+					cursor: pointer;
 				}
 			}
 		}
