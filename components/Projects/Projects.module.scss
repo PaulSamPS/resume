@@ -23,7 +23,7 @@
 			position: relative;
 			overflow: hidden;
 			border-radius: 11px;
-			box-shadow: 0 5px 5px 0 rgb(0 0 0 / 30%);
+			box-shadow: 0 0 5px 0 rgb(0 0 0 / 30%);
 			cursor: pointer;
 
 			&::before {
@@ -52,8 +52,12 @@
 				}
 			}
 
-			img {
-				border-radius: 11px;
+			span {
+				height: 100% !important;
+				img {
+					border-radius: 11px;
+					object-fit: contain;
+				}
 			}
 
 			.overlay {
