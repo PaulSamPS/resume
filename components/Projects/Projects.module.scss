@@ -54,9 +54,10 @@
 
 			span {
 				height: 100% !important;
+
 				img {
-					border-radius: 11px;
 					object-fit: contain;
+					border-radius: 11px;
 				}
 			}
 
@@ -87,6 +88,10 @@
 					width: 30px;
 					height: 30px;
 					cursor: pointer;
+				}
+
+				a {
+					color: white;
 				}
 			}
 		}
