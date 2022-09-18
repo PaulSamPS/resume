@@ -1,10 +1,10 @@
 import React, { ForwardedRef, forwardRef } from 'react';
 import styles from './Education.module.scss';
-import { H } from '../H/H';
+import { H } from '../Ui/H/H';
 import { IEducations } from './educations.interface';
-import { Span } from '../Span/Span';
-import { P } from '../P/P';
-import { Divider } from '../Divider/DIvider';
+import { Span } from '../Ui/Span/Span';
+import { P } from '../Ui/P/P';
+import { Divider } from '../Ui/Divider/DIvider';
 
 const educations = [
   {

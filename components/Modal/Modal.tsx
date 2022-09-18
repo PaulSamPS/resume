@@ -30,9 +30,7 @@ export const Modal: React.FC<ModalProps> = ({ children, setModal, modal }): JSX.
           initial={'closed'}
           exit={'closed'}
           transition={{
-            damping: 20,
-            type: 'spring',
-            stiffness: 360,
+            duration: 0.5,
           }}
         >
           <motion.div
@@ -43,9 +41,7 @@ export const Modal: React.FC<ModalProps> = ({ children, setModal, modal }): JSX.
             initial={'closed'}
             exit={'closed'}
             transition={{
-              damping: 20,
-              type: 'spring',
-              stiffness: 360,
+              duration: 0.5,
             }}
           >
             <CloseIcon onClick={handleCloseModal} />

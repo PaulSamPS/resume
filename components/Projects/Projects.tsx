@@ -1,9 +1,9 @@
 import React, { ForwardedRef, forwardRef } from 'react';
-import { H } from '../H/H';
+import { H } from '../Ui/H/H';
 import styles from './Projects.module.scss';
 import Image from 'next/image';
 import ViewIcon from './view.svg';
-import { P } from '../P/P';
+import { P } from '../Ui/P/P';
 import { ProjectsProps } from './Projects.props';
 import Link from 'next/link';
 

@@ -5,10 +5,11 @@ import EmailIcon from './email.svg';
 import styles from './Header.module.scss';
 import classNames from 'classnames';
 import Image from 'next/image';
-import { H } from '../H/H';
-import { P } from '../P/P';
-import { Span } from '../Span/Span';
+import { H } from '../Ui/H/H';
+import { P } from '../Ui/P/P';
+import { Span } from '../Ui/Span/Span';
 import { ForwardedRef, forwardRef } from 'react';
+
 export const Header = forwardRef(({ className, ...props }: HeaderType, ref: ForwardedRef<HTMLDivElement>) => {
   return (
     <div className={classNames(className, styles.wrapper)} ref={ref} {...props}>
