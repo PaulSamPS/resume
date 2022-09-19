@@ -24,13 +24,15 @@ export const Projects = forwardRef(({ projects }: ProjectsProps, ref: ForwardedR
               priority={true}
             />
             <div className={styles.overlay}>
-              <Link href={p.projectLink} target={'_blank'}>
-                <ViewIcon />
-              </Link>
+              {p.projectLink !== '' && (
+                <a href={p.projectLink} target={'_blank'}>
+                  <ViewIcon />
+                </a>
+              )}
               <P>{p.description}</P>
-              <Link href={p.gitHub} target={'_blank'}>
+              <a href={p.gitHub} target={'_blank'}>
                 View on github
-              </Link>
+              </a>
             </div>
           </div>
         ))}
