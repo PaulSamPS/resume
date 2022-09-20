@@ -31,7 +31,7 @@ export const Projects = forwardRef(({ projects }: ProjectsProps, ref: ForwardedR
               )}
               <P>{p.description}</P>
               <a href={p.gitHub} target={'_blank'}>
-                View on github
+                Посмотреть на github
               </a>
             </div>
           </div>
