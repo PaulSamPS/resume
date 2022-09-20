@@ -5,7 +5,6 @@ import Image from 'next/image';
 import ViewIcon from './view.svg';
 import { P } from '../Ui/P/P';
 import { ProjectsProps } from './Projects.props';
-import Link from 'next/link';
 
 export const Projects = forwardRef(({ projects }: ProjectsProps, ref: ForwardedRef<HTMLDivElement>) => {
   return (
