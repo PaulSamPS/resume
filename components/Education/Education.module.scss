@@ -7,23 +7,25 @@
 	.educations {
 		@extend %container;
 
-		display: flex;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
 		padding: 120px 20px;
 		column-gap: 30px;
+		line-height: 25px;
 
 		@include _desktop {
 			width: 100%;
 		}
 
 		@include _mobileL {
-			flex-direction: column;
+			grid-template-columns: 1fr;
 			row-gap: 40px;
 		}
-	}
 
-	.item {
-		display: flex;
-		flex-direction: column;
-		row-gap: 30px;
+		.item {
+			display: flex;
+			flex-direction: column;
+			row-gap: 30px;
+		}
 	}
 }

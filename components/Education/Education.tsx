@@ -1,49 +1,25 @@
 import React, { ForwardedRef, forwardRef } from 'react';
 import styles from './Education.module.scss';
 import { H } from '../Ui/H/H';
-import { IEducations } from './educations.interface';
+import { IEducations } from '../../interfaces/educations.interface';
 import { Span } from '../Ui/Span/Span';
 import { P } from '../Ui/P/P';
 import { Divider } from '../Ui/Divider/DIvider';
+import { EducationProps } from './Education.props';
 
-const educations = [
-  {
-    id: 0,
-    years: '2021 - 2021',
-    position: 'FULL STACK DEVELOPER',
-    company: 'Wix',
-    des: 'Duis aute irure dolor in reprehenderit in vol patate velit esse cillum dolore eu fugiat nulla pari. Excepteur sint occana inna tecat cupidatat non proident.',
-  },
-  {
-    id: 1,
-    years: '2021 - 2021',
-    position: 'FULL STACK DEVELOPER',
-    company: 'Google',
-    des: 'Duis aute irure dolor in reprehenderit in vol patate velit esse cillum dolore eu fugiat nulla pari. Excepteur sint occana inna tecat cupidatat non proident.',
-  },
-  {
-    id: 2,
-    years: '2021 - 2021',
-    position: 'FULL STACK DEVELOPER',
-    company: 'Facebook',
-    des: 'Duis aute irure dolor in reprehenderit in vol patate velit esse cillum dolore eu fugiat nulla pari. Excepteur sint occana inna tecat cupidatat non proident.',
-  },
-];
-
-export const Education = forwardRef((props, ref: ForwardedRef<HTMLDivElement>) => {
+export const Education = forwardRef(({ education }: EducationProps, ref: ForwardedRef<HTMLDivElement>) => {
   return (
     <div className={styles.wrapper} ref={ref}>
       <H appearance='uppercase' border='bottom'>
         Образование
       </H>
       <div className={styles.educations}>
-        {educations.map((e: IEducations) => (
-          <div key={e.id} className={styles.item}>
-            <Span>{e.years}</Span>
-            <P>{e.position}</P>
-            <Divider appearance='horizontal' arr={educations} itemId={e.id} />
-            <Span>{e.company}</Span>
-            <P>{e.des}</P>
+        {education.map((e: IEducations, index) => (
+          <div key={e._id} className={styles.item}>
+            <Span>{e.author}</Span>
+            <P>{e.name}</P>
+            <Divider appearance='horizontal' arr={education} index={index} />
+            <P>{e.desc}</P>
           </div>
         ))}
       </div>

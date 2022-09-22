@@ -10,7 +10,7 @@ type RefsExport = {
   educationRef: React.MutableRefObject<HTMLDivElement | null>;
 };
 
-export const useScroll = (link?: string): RefsExport => {
+export const useScrollToBlock = (link?: string): RefsExport => {
   const introRef = React.useRef<HTMLDivElement | null>(null);
   const experienceRef = React.useRef<HTMLDivElement | null>(null);
   const skillsRef = React.useRef<HTMLDivElement | null>(null);

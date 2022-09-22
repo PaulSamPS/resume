@@ -1,58 +1,42 @@
 import React, { ForwardedRef, forwardRef } from 'react';
 import styles from './Experience.module.scss';
-import { ExperienceType } from './Experience.type';
+import { ExperienceProps } from './Experience.props';
 import classNames from 'classnames';
-import { IExp } from './experince.interface';
+import { IExp } from '../../interfaces/experince.interface';
 import { Divider } from '../Ui/Divider/DIvider';
 import { H } from '../Ui/H/H';
 import { P } from '../Ui/P/P';
 import { Span } from '../Ui/Span/Span';
 
-const exp = [
-  {
-    id: 0,
-    years: '2021 - 2021',
-    position: 'FULL STACK DEVELOPER',
-    company: 'Wix',
-    des: 'Duis aute irure dolor in reprehenderit in vol patate velit esse cillum dolore eu fugiat nulla pari. Excepteur sint occana inna tecat cupidatat non proident.',
-  },
-  {
-    id: 1,
-    years: '2021 - 2021',
-    position: 'FULL STACK DEVELOPER',
-    company: 'Google',
-    des: 'Duis aute irure dolor in reprehenderit in vol patate velit esse cillum dolore eu fugiat nulla pari. Excepteur sint occana inna tecat cupidatat non proident.',
-  },
-  {
-    id: 2,
-    years: '2021 - 2021',
-    position: 'FULL STACK DEVELOPER',
-    company: 'Facebook',
-    des: 'Duis aute irure dolor in reprehenderit in vol patate velit esse cillum dolore eu fugiat nulla pari. Excepteur sint occana inna tecat cupidatat non proident.',
-  },
-];
-
-export const Experience = forwardRef(({ className, ...props }: ExperienceType, ref: ForwardedRef<HTMLDivElement>) => {
-  return (
-    <div className={classNames(className, styles.wrapper)} ref={ref} {...props}>
-      <H appearance='uppercase' border='bottom'>
-        Опыт
-      </H>
-      <div className={styles.experience}>
-        {exp.map((e: IExp) => (
-          <div key={e.id} className={styles.item}>
-            <div className={styles.date}>
-              <Span>{e.years}</Span>
-              <P>{e.position}</P>
+export const Experience = forwardRef(
+  ({ experience, className, ...props }: ExperienceProps, ref: ForwardedRef<HTMLDivElement>) => {
+    return (
+      <div className={classNames(className, styles.wrapper)} ref={ref} {...props}>
+        <H appearance='uppercase' border='bottom'>
+          Опыт
+        </H>
+        <div className={styles.experience}>
+          {experience.map((e: IExp, index) => (
+            <div key={e._id} className={styles.item}>
+              <div className={styles.type}>
+                <Span>{e.type}</Span>
+                <P>{e.position}</P>
+              </div>
+              <Divider appearance='vertical' arr={experience} index={index} />
+              <div className={styles.name}>
+                {e.projectLink !== '' ? (
+                  <a href={e.projectLink} target={'_blank'}>
+                    <Span>{e.name}</Span>
+                  </a>
+                ) : (
+                  <Span>{e.name}</Span>
+                )}
+                <P>{e.desc}</P>
+              </div>
             </div>
-            <Divider appearance='vertical' arr={exp} itemId={e.id} />
-            <div className={styles.company}>
-              <Span>{e.company}</Span>
-              <P>{e.des}</P>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
-  );
-});
+    );
+  }
+);

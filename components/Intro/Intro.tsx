@@ -13,10 +13,8 @@ export const Intro = forwardRef(({ className, ...props }: IntroType, ref: Forwar
           Привет, <span>я Павел</span>. Приятно познакомиться.
         </H>
         <P>
-          Artificial intelligence (AI), sometimes called machine intelligence, is intelligence demonstrated by machines,
-          unlike the natural intelligence displayed by humans and animals. Leading AI textbooks define the field as the
-          study of intelligent agents: any device that perceives its environment and takes actions that maximize its
-          chance of successfully achieving its goals.
+          Стремлюсь стать частью дружной и профессиональной команды, в которой я мог бы развивать свои навыки разработки
+          React, TypeScript, Redux, Websocket и React-Native для достижения командных результатов.
         </P>
       </div>
     </div>

@@ -1,5 +1,16 @@
 @import "./styles/scss/index";
 
+.progressBar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 2px;
+	background: $purple;
+	transform-origin: 0;
+	z-index: 9999;
+}
+
 .divider {
 	border-bottom: 1px solid $color3;
 }

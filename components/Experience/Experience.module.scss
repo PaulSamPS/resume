@@ -17,7 +17,7 @@
 		.item {
 			display: flex;
 
-			.date {
+			.type {
 				display: flex;
 				flex-direction: column;
 				min-width: 50%;
@@ -34,7 +34,7 @@
 				}
 			}
 
-			.company {
+			.name {
 				display: flex;
 				flex-direction: column;
 				margin-bottom: 70px;
@@ -47,6 +47,10 @@
 
 				@include _mobileL {
 					padding-left: 20px;
+				}
+
+				p {
+					line-height: 25px;
 				}
 			}
 		}

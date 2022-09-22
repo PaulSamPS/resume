@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 export const useScrollUp = (): number => {
   const isBrowser = typeof window !== 'undefined';
 
-  const [srollY, setScrollY] = useState(0);
+  const [scrollY, setScrollY] = useState(0);
 
   const handleScroll = () => {
     const currentScrollY = isBrowser ? window.scrollY : 0;
@@ -15,5 +15,5 @@ export const useScrollUp = (): number => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  return srollY;
+  return scrollY;
 };
