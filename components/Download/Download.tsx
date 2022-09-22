@@ -1,5 +1,4 @@
 import React, { ForwardedRef, forwardRef } from 'react';
-import { H } from '../Ui/H/H';
 import styles from './Download.module.scss';
 import { saveAs } from 'file-saver';
 
