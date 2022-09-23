@@ -1,14 +1,6 @@
 import React from 'react';
-import { Header } from '../components/Header/Header';
-import { Intro } from '../components/Intro/Intro';
-import { Experience } from '../components/Experience/Experience';
-import { Skills } from '../components/Skills/Skills';
-import { Education } from '../components/Education/Education';
-import { Projects } from '../components/Projects/Projects';
-import { Download } from '../components/Download/Download';
 import { GetStaticProps } from 'next';
-import { Menu } from '../components/Menu/Menu';
-import { Up } from '../components/Up/Up';
+import { Download, Education, Experience, Header, Intro, Menu, Projects, Skills, Up } from '../components/Business';
 import { motion, useSpring, useScroll } from 'framer-motion';
 import { useScrollToBlock } from '../hooks/useScrollToBlock';
 import { IEducations, IExp, IMenuItem, IProjectItem, ISkillItem } from '../interfaces';

@@ -5,5 +5,6 @@ import CloseIcon from './close.svg';
 import UpIcon from './up.svg';
 import MenuIcon from './menu.svg';
 import LabelIcon from './label.svg';
+import ViewIcon from './view.svg';
 
-export { EmailIcon, WhatsappIcon, GitIcon, CloseIcon, MenuIcon, UpIcon, LabelIcon };
+export { EmailIcon, WhatsappIcon, GitIcon, CloseIcon, MenuIcon, UpIcon, LabelIcon, ViewIcon };
