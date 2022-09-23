@@ -1,7 +1,6 @@
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
-import { ISkillItem } from '../../interfaces/skills.interfface';
+import { ISkillItem } from '../../interfaces';
 
-export interface SkillsType
-  extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+export interface SkillsType extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   skills: ISkillItem[];
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import { ReactComponent as CloseIcon } from '../../images/icons/close.svg';
 import { ModalProps } from './Modal.props';
 import { AnimatePresence, motion } from 'framer-motion';
+
 import styles from './Modal.module.scss';
 
 export const Modal: React.FC<ModalProps> = ({ children, setModal, modal }): JSX.Element => {

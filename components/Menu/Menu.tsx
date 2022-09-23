@@ -1,11 +1,12 @@
 import React from 'react';
-import styles from './Menu.module.scss';
 import MenuIcon from '../../images/icons/menu.svg';
 import LabelIcon from '../../images/icons/label.svg';
 import { MenuProps } from './Menu.props';
 import { useScreenSize } from '../../hooks/useScreenSize';
 import { Modal } from '../Modal/Modal';
 import classNames from 'classnames';
+
+import styles from './Menu.module.scss';
 
 export const Menu = ({ menu, setLink }: MenuProps) => {
   const [modal, setModal] = React.useState<boolean>(false);

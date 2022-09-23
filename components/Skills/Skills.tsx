@@ -1,9 +1,9 @@
 import React, { ForwardedRef, forwardRef } from 'react';
-import { H } from '../Ui/H/H';
-import styles from './Skills.module.scss';
-import { P } from '../Ui/P/P';
+import { H, P } from '../Ui';
 import { SkillsType } from './Skills.type';
 import classNames from 'classnames';
+
+import styles from './Skills.module.scss';
 
 export const Skills = forwardRef(({ skills, className, ...props }: SkillsType, ref: ForwardedRef<HTMLDivElement>) => {
   return (

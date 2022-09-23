@@ -1,10 +1,10 @@
 import React, { ForwardedRef, forwardRef } from 'react';
-import { H } from '../Ui/H/H';
-import styles from './Projects.module.scss';
+import { H, P } from '../Ui';
 import Image from 'next/image';
 import ViewIcon from './view.svg';
-import { P } from '../Ui/P/P';
 import { ProjectsProps } from './Projects.props';
+
+import styles from './Projects.module.scss';
 
 export const Projects = forwardRef(({ projects }: ProjectsProps, ref: ForwardedRef<HTMLDivElement>) => {
   return (

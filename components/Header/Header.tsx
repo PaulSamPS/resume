@@ -1,14 +1,13 @@
+import { ForwardedRef, forwardRef } from 'react';
 import { HeaderType } from './Header.type';
 import ProfilePicture from '../../images/profile.jpg';
 import WhatsappIcon from './whatsapp.svg';
 import EmailIcon from './email.svg';
-import styles from './Header.module.scss';
 import classNames from 'classnames';
 import Image from 'next/image';
-import { H } from '../Ui/H/H';
-import { P } from '../Ui/P/P';
-import { Span } from '../Ui/Span/Span';
-import { ForwardedRef, forwardRef } from 'react';
+import { H, P, Span } from '../Ui';
+
+import styles from './Header.module.scss';
 
 export const Header = forwardRef(({ className, ...props }: HeaderType, ref: ForwardedRef<HTMLDivElement>) => {
   return (

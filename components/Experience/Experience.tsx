@@ -1,12 +1,9 @@
 import React, { ForwardedRef, forwardRef } from 'react';
-import styles from './Experience.module.scss';
 import { ExperienceProps } from './Experience.props';
+import { Divider, H, P, Span } from '../Ui';
 import classNames from 'classnames';
-import { IExp } from '../../interfaces/experince.interface';
-import { Divider } from '../Ui/Divider/DIvider';
-import { H } from '../Ui/H/H';
-import { P } from '../Ui/P/P';
-import { Span } from '../Ui/Span/Span';
+
+import styles from './Experience.module.scss';
 
 export const Experience = forwardRef(
   ({ experience, className, ...props }: ExperienceProps, ref: ForwardedRef<HTMLDivElement>) => {
@@ -16,7 +13,7 @@ export const Experience = forwardRef(
           Опыт
         </H>
         <div className={styles.experience}>
-          {experience.map((e: IExp, index) => (
+          {experience.map((e, index) => (
             <div key={e._id} className={styles.item}>
               <div className={styles.type}>
                 <Span>{e.type}</Span>

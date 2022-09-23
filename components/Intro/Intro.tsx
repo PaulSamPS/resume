@@ -1,9 +1,9 @@
 import React, { ForwardedRef, forwardRef } from 'react';
-import styles from './Intro.module.scss';
 import { IntroType } from './Intro.type';
 import classNames from 'classnames';
-import { H } from '../Ui/H/H';
-import { P } from '../Ui/P/P';
+import { H, P } from '../Ui';
+
+import styles from './Intro.module.scss';
 
 export const Intro = forwardRef(({ className, ...props }: IntroType, ref: ForwardedRef<HTMLDivElement>) => {
   return (
