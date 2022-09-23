@@ -1,11 +1,10 @@
 import { ForwardedRef, forwardRef } from 'react';
 import { HeaderType } from './Header.type';
 import ProfilePicture from '../../images/profile.jpg';
-import WhatsappIcon from './whatsapp.svg';
-import EmailIcon from './email.svg';
-import classNames from 'classnames';
-import Image from 'next/image';
+import { EmailIcon, GitIcon, WhatsappIcon } from '../../Icons';
 import { H, P, Span } from '../Ui';
+import Image from 'next/image';
+import classNames from 'classnames';
 
 import styles from './Header.module.scss';
 
@@ -35,6 +34,16 @@ export const Header = forwardRef(({ className, ...props }: HeaderType, ref: Forw
             <Span>Email</Span>
           </div>
           <P>psamoylenko2@gmail.com</P>
+        </div>
+        <div className={styles.line} />
+        <div className={styles.item}>
+          <div className={styles.icon}>
+            <GitIcon />
+            <Span>Github</Span>
+          </div>
+          <a href={'https://github.com/PaulSamPS'} target={'_blank'}>
+            github.com/paulsamps
+          </a>
         </div>
       </div>
     </div>

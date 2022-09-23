@@ -1,7 +1,7 @@
-import { motion, useAnimation } from 'framer-motion';
 import { useEffect } from 'react';
-import UpIcon from '../../images/icons/up.svg';
+import { motion, useAnimation } from 'framer-motion';
 import { useScrollUp } from '../../hooks/useScrollUp';
+import { UpIcon } from '../../Icons';
 
 import styles from './Up.module.scss';
 
