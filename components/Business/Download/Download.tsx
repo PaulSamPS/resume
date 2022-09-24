@@ -4,7 +4,7 @@ import { saveAs } from 'file-saver';
 
 export const Download = forwardRef((props, ref: ForwardedRef<HTMLDivElement>) => {
   const saveFile = () => {
-    saveAs('/resume.txt', 'resume.txt');
+    saveAs('/resume.pdf', 'resume.pdf');
   };
   return (
     <div className={styles.wrapper} ref={ref}>
