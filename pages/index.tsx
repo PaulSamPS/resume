@@ -12,6 +12,7 @@ const Home = ({ menu, projects, skills, experience, education }: HomeProps) => {
   const [link, setLink] = React.useState<string>('');
   const { introRef, experienceRef, skillsRef, educationRef, projectsRef, resumeRef } = useScrollToBlock(link);
   const { scrollYProgress } = useScroll();
+
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,

@@ -21,7 +21,7 @@ export const Modal: React.FC<ModalProps> = ({ children, setModal, modal }): JSX.
   };
 
   return (
-    <AnimatePresence>
+    <AnimatePresence mode='wait'>
       {modal && (
         <motion.div
           className={styles.overlay}
