@@ -37,16 +37,12 @@ const Home = ({ menu, projects, skills, experience, education }: HomeProps) => {
 export default Home;
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
-  const getMenu = await axios.get<IMenuItem[]>('http://176.113.83.209:5000/api/menu');
-  const getProjects = await axios.get<IProjectItem[]>('http://176.113.83.209:5000/api/projects');
-  const getSkills = await axios.get<ISkillItem[]>('http://176.113.83.209:5000/api/skills');
-  const getExperience = await axios.get<IExp[]>('http://176.113.83.209:5000/api/experience');
-  const getEducations = await axios.get<IEducations[]>('http://176.113.83.209:5000/api/educations');
-  const menu = getMenu.data;
-  const projects = getProjects.data;
-  const skills = getSkills.data;
-  const experience = getExperience.data;
-  const education = getEducations.data;
+  const { data: menu } = await axios.get<IMenuItem[]>('http://176.113.83.209:5000/api/menu');
+  const { data: projects } = await axios.get<IProjectItem[]>('http://176.113.83.209:5000/api/projects');
+  const { data: skills} = await axios.get<ISkillItem[]>('http://176.113.83.209:5000/api/skills');
+  const { data: experience } = await axios.get<IExp[]>('http://176.113.83.209:5000/api/experience');
+  const { data: education } = await axios.get<IEducations[]>('http://176.113.83.209:5000/api/educations');
+
   return {
     props: {
       menu,
