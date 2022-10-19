@@ -1,5 +1,3 @@
-@import "../../../styles/scss/index";
-
 .container {
 	width: 100%;
 	background: $color4;
@@ -7,7 +5,7 @@
 	.wrapper {
 		padding: 150px 20px;
 
-		@extend %container610;
+		@include container-610px;
 
 		h1 {
 			margin-bottom: 30px;

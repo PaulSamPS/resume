@@ -1,8 +1,6 @@
-@import "../../../styles/scss/index";
-
 .wrapper {
 	.skills {
-		@extend %container;
+		@include container;
 
 		display: grid;
 		grid-template-columns: 1fr 1fr;

@@ -1,18 +1,12 @@
-@import "../../../styles/scss/index";
-
 .wrapper {
 	border-bottom: 1px solid $color3;
 
 	.experience {
-		@extend %container;
+		@include container;
 
 		max-width: 800px;
 		margin: 0 auto;
 		padding: 120px 20px 90px;
-
-		@include _desktop {
-
-		}
 
 		.item {
 			display: flex;

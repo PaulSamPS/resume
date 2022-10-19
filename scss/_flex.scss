@@ -1,4 +1,4 @@
-%flex {
+@mixin flex-column-a-center {
 	display: flex;
 	flex-direction: column;
 	align-items: center;

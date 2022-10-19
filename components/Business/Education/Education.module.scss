@@ -1,11 +1,9 @@
-@import "../../../styles/scss/index";
-
 .wrapper {
 	width: 100%;
 	background: $color4;
 
 	.educations {
-		@extend %container;
+		@include container;
 
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);

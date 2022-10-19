@@ -7,7 +7,7 @@ import styles from './Skills.module.scss';
 
 export const Skills = forwardRef(({ skills, className, ...props }: SkillsType, ref: ForwardedRef<HTMLDivElement>) => {
   return (
-    <div className={classNames(className, styles.wrapper)} ref={ref} {...props}>
+    <section className={classNames(className, styles.wrapper)} ref={ref} {...props}>
       <H appearance='uppercase' border='bottom'>
         Навыки
       </H>
@@ -19,6 +19,6 @@ export const Skills = forwardRef(({ skills, className, ...props }: SkillsType, r
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 });

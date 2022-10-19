@@ -1,4 +1,5 @@
-@import "../node_modules/normalize.css";
+@import '../node_modules/normalize.css';
+@import "scss/index";
 
 html,
 body {
@@ -10,19 +11,19 @@ body {
 
 
 @font-face {
-	font-family: "VKRegular";
+	font-family: 'VKRegular';
 	src: url('../fonts/VKSansDisplay-Regular.ttf');
 	font-weight: 400;
 }
 
 @font-face {
-	font-family: "VKBold";
+	font-family: 'VKBold';
 	src: url('../fonts/VKSansDisplay-Bold.ttf');
 	font-weight: 700;
 }
 
 @font-face {
-	font-family: "VKMedium";
+	font-family: 'VKMedium';
 	src: url('../fonts/VKSansDisplay-Medium.ttf');
 	font-weight: 500;
 }

@@ -20,7 +20,7 @@ const Home = ({ menu, projects, skills, experience, education }: HomeProps) => {
   });
 
   return (
-    <div className={styles.container}>
+    <main className={styles.container}>
       <motion.div className={styles.progressBar} style={{ scaleX }} />
       <Menu menu={menu} setLink={setLink} />
       <Header ref={introRef} className={styles.title} />
@@ -31,7 +31,7 @@ const Home = ({ menu, projects, skills, experience, education }: HomeProps) => {
       <Projects ref={projectsRef} projects={projects} />
       <Download ref={resumeRef} />
       <Up />
-    </div>
+    </main>
   );
 };
 export default Home;
@@ -39,7 +39,7 @@ export default Home;
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   const { data: menu } = await axios.get<IMenuItem[]>('http://176.113.83.209:5000/api/menu');
   const { data: projects } = await axios.get<IProjectItem[]>('http://176.113.83.209:5000/api/projects');
-  const { data: skills} = await axios.get<ISkillItem[]>('http://176.113.83.209:5000/api/skills');
+  const { data: skills } = await axios.get<ISkillItem[]>('http://176.113.83.209:5000/api/skills');
   const { data: experience } = await axios.get<IExp[]>('http://176.113.83.209:5000/api/experience');
   const { data: education } = await axios.get<IEducations[]>('http://176.113.83.209:5000/api/educations');
 

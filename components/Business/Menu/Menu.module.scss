@@ -1,10 +1,8 @@
-@import "../../../styles/scss/index";
-
 .wrapper {
 	border-bottom: 1px solid $color3;
 
 	.menu {
-		@extend %container;
+		@include container;
 
 		display: flex;
 		align-items: center;

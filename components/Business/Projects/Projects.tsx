@@ -8,7 +8,7 @@ import styles from './Projects.module.scss';
 
 export const Projects = forwardRef(({ projects }: ProjectsProps, ref: ForwardedRef<HTMLDivElement>) => {
   return (
-    <div className={styles.wrapper} ref={ref}>
+    <section className={styles.wrapper} ref={ref}>
       <H appearance='uppercase' border='bottom'>
         Проекты
       </H>
@@ -21,6 +21,7 @@ export const Projects = forwardRef(({ projects }: ProjectsProps, ref: ForwardedR
               width={356}
               height={241}
               priority={true}
+              title={p.name}
             />
             <div className={styles.overlay}>
               {p.projectLink !== '' && (
@@ -36,6 +37,6 @@ export const Projects = forwardRef(({ projects }: ProjectsProps, ref: ForwardedR
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 });

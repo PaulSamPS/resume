@@ -1,7 +1,5 @@
-@import "../../../styles/scss/index";
-
 .wrapper {
-	@extend %flex;
+	@include flex-column-a-center;
 
 	padding: 0 20px;
 

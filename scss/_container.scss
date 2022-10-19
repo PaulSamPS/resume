@@ -1,9 +1,9 @@
-%container {
+@mixin container {
 	max-width: 990px;
 	margin: 0 auto;
 }
 
-%container610 {
+@mixin container-610px {
 	max-width: 610px;
 	margin: 0 auto;
 }

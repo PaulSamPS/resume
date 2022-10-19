@@ -10,7 +10,7 @@ import styles from './Header.module.scss';
 
 export const Header = forwardRef(({ className, ...props }: HeaderType, ref: ForwardedRef<HTMLDivElement>) => {
   return (
-    <div className={classNames(className, styles.wrapper)} ref={ref} {...props}>
+    <section className={classNames(className, styles.wrapper)} ref={ref} {...props}>
       <H>Frontend - разработчик</H>
       <P className={styles.subtitle}>
         Целеустремленный frontend разработчик со страстью к разработке пользовательского интерфейса, сотрудничеству и
@@ -46,6 +46,6 @@ export const Header = forwardRef(({ className, ...props }: HeaderType, ref: Forw
           </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 });

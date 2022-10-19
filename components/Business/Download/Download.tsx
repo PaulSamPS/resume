@@ -7,10 +7,10 @@ export const Download = forwardRef((props, ref: ForwardedRef<HTMLDivElement>) =>
     saveAs('/resume.pdf', 'resume.pdf');
   };
   return (
-    <div className={styles.wrapper} ref={ref}>
+    <section className={styles.wrapper} ref={ref}>
       <div className={styles.download}>
         <a onClick={saveFile}>Скачать резюме</a>
       </div>
-    </div>
+    </section>
   );
 });

@@ -17,8 +17,8 @@ export const Menu = ({ menu, setLink }: MenuProps) => {
   };
 
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.menu}>
+    <section className={styles.wrapper}>
+      <nav className={styles.menu}>
         {screenWidth >= 768 ? (
           <ul>
             {menu.map((m) => (
@@ -42,7 +42,7 @@ export const Menu = ({ menu, setLink }: MenuProps) => {
             ))}
           </ul>
         </Modal>
-      </div>
-    </div>
+      </nav>
+    </section>
   );
 };

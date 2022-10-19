@@ -6,7 +6,7 @@ import styles from './Education.module.scss';
 
 export const Education = forwardRef(({ education }: EducationProps, ref: ForwardedRef<HTMLDivElement>) => {
   return (
-    <div className={styles.wrapper} ref={ref}>
+    <section className={styles.wrapper} ref={ref}>
       <H appearance='uppercase' border='bottom'>
         Образование
       </H>
@@ -20,6 +20,6 @@ export const Education = forwardRef(({ education }: EducationProps, ref: Forward
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 });

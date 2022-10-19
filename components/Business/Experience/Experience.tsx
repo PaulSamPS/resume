@@ -8,7 +8,7 @@ import styles from './Experience.module.scss';
 export const Experience = forwardRef(
   ({ experience, className, ...props }: ExperienceProps, ref: ForwardedRef<HTMLDivElement>) => {
     return (
-      <div className={classNames(className, styles.wrapper)} ref={ref} {...props}>
+      <section className={classNames(className, styles.wrapper)} ref={ref} {...props}>
         <H appearance='uppercase' border='bottom'>
           Опыт
         </H>
@@ -33,7 +33,7 @@ export const Experience = forwardRef(
             </div>
           ))}
         </div>
-      </div>
+      </section>
     );
   }
 );

@@ -1,5 +1,5 @@
 {
-  "name": "portfolio-next",
+  "name": "resume",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -13,38 +13,32 @@
   "dependencies": {
     "@csstools/normalize.css": "^12.0.0",
     "@types/sass": "^1.43.1",
+    "@typescript-eslint/eslint-plugin": "^5.40.1",
     "axios": "^0.27.2",
     "classnames": "^2.3.1",
     "file-saver": "^2.0.5",
     "framer-motion": "^7.3.6",
     "next": "12.3.1",
     "normalize.css": "^8.0.1",
-    "react": "18.1.0",
-    "react-dom": "18.1.0",
-    "sass": "^1.52.1"
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
+
   "devDependencies": {
     "@next/eslint-plugin-next": "^12.1.6",
-    "@svgr/webpack": "^6.2.1",
+    "@svgr/webpack": "^6.5.0",
     "@types/file-saver": "^2.0.5",
-    "@types/node": "17.0.35",
-    "@types/react": "18.0.9",
-    "@types/react-dom": "18.0.5",
-    "@types/sass": "^1.43.1",
-    "@typescript-eslint/eslint-plugin": "^5.12.1",
-    "@typescript-eslint/parser": "^5.12.1",
-    "babel-plugin-inline-react-svg": "^2.0.1",
-    "eslint": "^8.10.0",
-    "eslint-config-google": "^0.14.0",
-    "eslint-plugin-jsdoc": "^37.9.5",
-    "eslint-plugin-react": "^7.29.2",
+    "@types/node": "18.11.2",
+    "@types/react": "18.0.21",
+    "@types/react-dom": "18.0.6",
+    "eslint": "8.10.0",
     "prettier": "^2.6.2",
-    "sass": "^1.50.1",
+    "sass": "^1.55.0",
     "stylelint": "^14.8.1",
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-standard": "^25.0.0",
     "stylelint-order": "^5.0.0",
     "stylelint-scss": "^4.2.0",
-    "typescript": "4.7.2"
+    "typescript": "4.8.4"
   }
 }
